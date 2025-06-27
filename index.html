@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A. Kanagavalli | Portfolio</title>
 
   <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
     body {
-      background-color: #e0f7ff; /* Sky blue background */
+      background-color: #e0f7ff;
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
+      color: #333;
     }
 
     nav {
@@ -62,11 +64,27 @@
       text-decoration: underline;
     }
 
+    section {
+      margin: 40px auto;
+      max-width: 900px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
     h2 {
-      display: inline-block;
       border-bottom: 2px solid #0077b5;
+      padding-bottom: 5px;
       color: #003f5c;
-      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
     }
 
     .contact i {
@@ -79,18 +97,45 @@
       font-size: 1.1em;
     }
 
-    section {
-      margin: 30px 20px;
+    .project-card {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      background: #f9f9f9;
     }
 
-    ul {
+    .project-card h4 {
       margin-top: 0;
+    }
+
+    a {
+      color: #0077b5;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+      .nav-links a {
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Bar with Updated Header -->
+  <!-- Navigation -->
   <nav>
     <div class="nav-name-wrapper">
       <div class="nav-name">A. Kanagavalli</div>
@@ -104,17 +149,19 @@
     </div>
   </nav>
 
-  <!-- Main Sections -->
+  <!-- About Me -->
   <section id="about">
     <h2>About Me</h2>
     <p>Before stepping into the SharePoint domain, I worked for two years as a Virtual Assistant at Access Win Solution (Bangalore), where I handled professional email communication, managed appointments, and served as a bridge between the Managing Director and employees. This experience helped me build a strong foundation in communication, task management, and digital organization. Later, I pursued a one-month internship at Dhanalakshmi Charitable Trust, which sparked my interest in automation and digital platforms. This led to my role as a SharePoint Developer at KPR Info Solution, where I managed over 800 department-specific portals. I now serve as a SharePoint Admin at SNS Institutions, overseeing department portals, student projects, events, and facility management, and working extensively with Power Automate, Power BI, and Power Apps. Though I haven’t yet worked with PowerShell and SharePoint APIs, I am eager to learn and committed to continuous skill development if given the opportunity.</p>
-  <a href="https://github.com/A-KV-process/Kanagavalli-Resume/raw/main/Kanagavalli%20A%20-%20Github%20Resume.pdf" download>
-  📄 Download Resume (PDF)
-</a>
-</section>
+    <a href="https://github.com/A-KV-process/Kanagavalli-Resume/raw/main/Kanagavalli%20A%20-%20Github%20Resume.pdf" download>
+      📄 Download Resume (PDF)
+    </a>
+  </section>
 
+  <!-- Skills -->
   <section id="skills">
     <h2>Skills</h2>
+
     <h4>🔹 Microsoft Technologies</h4>
     <ul>
       <li>SharePoint Development & Administration (Modern & Classic)</li>
@@ -156,15 +203,24 @@
     </ul>
   </section>
 
+  <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li>Created 800+ department portals in SharePoint</li>
-      <li>Automated approval workflows using Power Automate</li>
-      <li>Developed internal dashboards with Power BI</li>
-    </ul>
+    <div class="project-card">
+      <h4>🗂 SharePoint Department Portals</h4>
+      <p>Created and managed 800+ department portals at KPR Info Solution with custom permissions and automation.</p>
+    </div>
+    <div class="project-card">
+      <h4>⚙️ Workflow Automation</h4>
+      <p>Designed and implemented multi-step approval flows using Power Automate.</p>
+    </div>
+    <div class="project-card">
+      <h4>📊 Power BI Dashboards</h4>
+      <p>Developed and published internal dashboards for academic and admin reporting.</p>
+    </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Contact</h2>
     <p><i class="fas fa-envelope"></i>Email: <a href="mailto:akvalli14@gmail.com">akvalli14@gmail.com</a></p>
@@ -172,6 +228,22 @@
     <p><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/akv-process/" target="_blank">linkedin.com/in/kanagavalli</a></p>
   </section>
 
+  <!-- Footer -->
+  <footer>
+    © 2025 A. Kanagavalli. All rights reserved.
+  </footer>
+
+  <!-- Smooth Scroll Script -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
 
